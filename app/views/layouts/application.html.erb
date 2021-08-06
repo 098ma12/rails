@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TaskApp</title>
+    <title>MyApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,16 @@
   </head>
 
   <body>
+    
+    <header>
+      <h2>Ruby on rails スケジュール管理アプリ</h2> 
+    </header>
+     
     <%= yield %>
+    <footer>
+      <h2>今日の日時：<%= Date.today %> </h2>
+</P>
+
+    </footer>
   </body>
 </html>
