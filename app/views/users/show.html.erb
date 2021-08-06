@@ -1,0 +1,35 @@
+<h2>スケジュール詳細</h2>
+<table>
+    <tr>
+        <th>タイトル</th>
+        <td><%= @user.tytle %></td>
+    </tr>
+    <tr>
+        <th>開始日</th>
+        <td><%= @user.start_at %></td>
+    </tr>
+    <tr>
+        <th>投稿日時</th>
+        <td><%= @user.created_at.to_s(:datetime_jp) %></td>
+    </tr>
+    <tr>
+        <th>終日</th>
+        <td><% @user.all_day %>
+        <% if @user.all_day == "1" %>
+         ◯
+        <% else user.all_day == "0"%>
+            
+        <% end %></td>
+    </tr>
+    <tr> 
+        <th>スケジュールメモ</th>
+        <td><%= @user.memo %>
+        
+        </td>
+    </tr>
+</table>
+<div>
+    <ul>
+        <li><%= link_to "スケジュール一覧に戻る",:users %></li>
+    </ul>
+</div>
